@@ -32,3 +32,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Reference repos
+react-bits
