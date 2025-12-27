@@ -56,13 +56,17 @@ function App() {
         }
     ]
 
+    // Neutral aesthetic gradient colors
+    const gradientColors = ['#a8b5a0', '#d4a5a5', '#d4c4b0', '#a8b5a0']
+    const altGradientColors = ['#d4a5a5', '#c9a689', '#a8b5a0', '#d4a5a5']
+
     return (
         <div className="app">
             {/* Navigation */}
             <nav className="navbar glass">
                 <div className="container nav-container">
                     <a href="#" className="logo">
-                        <GradientText animationSpeed={4}>Portfolio</GradientText>
+                        <GradientText animationSpeed={4} colors={gradientColors}>Portfolio</GradientText>
                     </a>
                     <div className="nav-links">
                         <a href="#about">About</a>
@@ -79,8 +83,8 @@ function App() {
                     speed={0.3}
                     squareSize={50}
                     direction='diagonal'
-                    borderColor='rgba(99, 102, 241, 0.2)'
-                    hoverFillColor='rgba(99, 102, 241, 0.15)'
+                    borderColor='rgba(168, 181, 160, 0.15)'
+                    hoverFillColor='rgba(212, 165, 165, 0.1)'
                 />
                 <div className="container hero-container">
                     <div className={`hero-content ${isLoaded ? 'animate-fade-in' : ''}`}>
@@ -98,7 +102,7 @@ function App() {
                             />
                             <GradientText
                                 animationSpeed={3}
-                                colors={['#6366f1', '#8b5cf6', '#a855f7', '#ec4899', '#6366f1']}
+                                colors={['#a8b5a0', '#d4a5a5', '#c9a689', '#b8a08a', '#a8b5a0']}
                                 className="hero-name"
                             >
                                 Your Name
@@ -131,10 +135,10 @@ function App() {
             </section>
 
             {/* About Section */}
-            <section id="about" className="section">
+            <section id="about" className="section section-alt">
                 <div className="container">
                     <h2 className="section-title">
-                        About <GradientText animationSpeed={6}>Me</GradientText>
+                        About <GradientText animationSpeed={6} colors={gradientColors}>Me</GradientText>
                     </h2>
                     <div className="about-content">
                         <div className="about-text">
@@ -154,21 +158,21 @@ function App() {
                             />
                         </div>
                         <div className="about-stats">
-                            <SpotlightCard className="stat-card" spotlightColor="rgba(99, 102, 241, 0.3)">
+                            <SpotlightCard className="stat-card" spotlightColor="rgba(168, 181, 160, 0.25)">
                                 <span className="stat-number">
-                                    <GradientText animationSpeed={4}>3+</GradientText>
+                                    <GradientText animationSpeed={4} colors={gradientColors}>3+</GradientText>
                                 </span>
                                 <span className="stat-label">Years Experience</span>
                             </SpotlightCard>
-                            <SpotlightCard className="stat-card" spotlightColor="rgba(139, 92, 246, 0.3)">
+                            <SpotlightCard className="stat-card" spotlightColor="rgba(212, 165, 165, 0.25)">
                                 <span className="stat-number">
-                                    <GradientText animationSpeed={4}>20+</GradientText>
+                                    <GradientText animationSpeed={4} colors={altGradientColors}>20+</GradientText>
                                 </span>
                                 <span className="stat-label">Projects Completed</span>
                             </SpotlightCard>
-                            <SpotlightCard className="stat-card" spotlightColor="rgba(168, 85, 247, 0.3)">
+                            <SpotlightCard className="stat-card" spotlightColor="rgba(201, 166, 137, 0.25)">
                                 <span className="stat-number">
-                                    <GradientText animationSpeed={4}>10+</GradientText>
+                                    <GradientText animationSpeed={4} colors={gradientColors}>10+</GradientText>
                                 </span>
                                 <span className="stat-label">Happy Clients</span>
                             </SpotlightCard>
@@ -181,48 +185,48 @@ function App() {
             <section id="projects" className="section">
                 <div className="container">
                     <h2 className="section-title">
-                        Featured <GradientText animationSpeed={6}>Projects</GradientText>
+                        Featured <GradientText animationSpeed={6} colors={gradientColors}>Projects</GradientText>
                     </h2>
                     <div className="projects-grid">
-                        <SpotlightCard className="project-card" spotlightColor="rgba(99, 102, 241, 0.25)">
+                        <SpotlightCard className="project-card" spotlightColor="rgba(168, 181, 160, 0.2)">
                             <div className="project-image">
-                                <div className="project-placeholder"></div>
+                                <div className="project-placeholder sage"></div>
                             </div>
                             <div className="project-content">
                                 <h3>Project One</h3>
                                 <p>A modern web application built with React and Node.js featuring real-time updates and seamless user experience.</p>
                                 <div className="project-tags">
-                                    <span className="tag">React</span>
-                                    <span className="tag">Node.js</span>
-                                    <span className="tag">MongoDB</span>
+                                    <span className="tag sage">React</span>
+                                    <span className="tag sage">Node.js</span>
+                                    <span className="tag sage">MongoDB</span>
                                 </div>
                             </div>
                         </SpotlightCard>
-                        <SpotlightCard className="project-card" spotlightColor="rgba(139, 92, 246, 0.25)">
+                        <SpotlightCard className="project-card" spotlightColor="rgba(212, 165, 165, 0.2)">
                             <div className="project-image">
-                                <div className="project-placeholder"></div>
+                                <div className="project-placeholder rose"></div>
                             </div>
                             <div className="project-content">
                                 <h3>Project Two</h3>
                                 <p>E-commerce platform with integrated payment processing, inventory management, and analytics dashboard.</p>
                                 <div className="project-tags">
-                                    <span className="tag">Next.js</span>
-                                    <span className="tag">Stripe</span>
-                                    <span className="tag">PostgreSQL</span>
+                                    <span className="tag rose">Next.js</span>
+                                    <span className="tag rose">Stripe</span>
+                                    <span className="tag rose">PostgreSQL</span>
                                 </div>
                             </div>
                         </SpotlightCard>
-                        <SpotlightCard className="project-card" spotlightColor="rgba(168, 85, 247, 0.25)">
+                        <SpotlightCard className="project-card" spotlightColor="rgba(201, 166, 137, 0.2)">
                             <div className="project-image">
-                                <div className="project-placeholder"></div>
+                                <div className="project-placeholder terracotta"></div>
                             </div>
                             <div className="project-content">
                                 <h3>Project Three</h3>
                                 <p>AI-powered productivity tool that helps teams collaborate more effectively with smart automation.</p>
                                 <div className="project-tags">
-                                    <span className="tag">Python</span>
-                                    <span className="tag">AI/ML</span>
-                                    <span className="tag">FastAPI</span>
+                                    <span className="tag terracotta">Python</span>
+                                    <span className="tag terracotta">AI/ML</span>
+                                    <span className="tag terracotta">FastAPI</span>
                                 </div>
                             </div>
                         </SpotlightCard>
@@ -231,14 +235,14 @@ function App() {
             </section>
 
             {/* Skills Section */}
-            <section id="skills" className="section">
+            <section id="skills" className="section section-alt">
                 <div className="container">
                     <h2 className="section-title">
-                        My <GradientText animationSpeed={6}>Skills</GradientText>
+                        My <GradientText animationSpeed={6} colors={gradientColors}>Skills</GradientText>
                     </h2>
                     <div className="skills-grid">
-                        <SpotlightCard className="skill-category" spotlightColor="rgba(99, 102, 241, 0.25)">
-                            <h3><GradientText animationSpeed={5}>Frontend</GradientText></h3>
+                        <SpotlightCard className="skill-category" spotlightColor="rgba(168, 181, 160, 0.2)">
+                            <h3><GradientText animationSpeed={5} colors={gradientColors}>Frontend</GradientText></h3>
                             <div className="skill-list">
                                 <span className="skill-item">React</span>
                                 <span className="skill-item">Next.js</span>
@@ -246,8 +250,8 @@ function App() {
                                 <span className="skill-item">CSS/Sass</span>
                             </div>
                         </SpotlightCard>
-                        <SpotlightCard className="skill-category" spotlightColor="rgba(139, 92, 246, 0.25)">
-                            <h3><GradientText animationSpeed={5}>Backend</GradientText></h3>
+                        <SpotlightCard className="skill-category" spotlightColor="rgba(212, 165, 165, 0.2)">
+                            <h3><GradientText animationSpeed={5} colors={altGradientColors}>Backend</GradientText></h3>
                             <div className="skill-list">
                                 <span className="skill-item">Node.js</span>
                                 <span className="skill-item">Python</span>
@@ -255,8 +259,8 @@ function App() {
                                 <span className="skill-item">MongoDB</span>
                             </div>
                         </SpotlightCard>
-                        <SpotlightCard className="skill-category" spotlightColor="rgba(168, 85, 247, 0.25)">
-                            <h3><GradientText animationSpeed={5}>Tools</GradientText></h3>
+                        <SpotlightCard className="skill-category" spotlightColor="rgba(201, 166, 137, 0.2)">
+                            <h3><GradientText animationSpeed={5} colors={gradientColors}>Tools</GradientText></h3>
                             <div className="skill-list">
                                 <span className="skill-item">Git</span>
                                 <span className="skill-item">Docker</span>
@@ -273,7 +277,7 @@ function App() {
                 <div className="container">
                     <div className="contact-wrapper">
                         <h2 className="section-title">
-                            Let's <GradientText animationSpeed={5}>Connect</GradientText>
+                            Let's <GradientText animationSpeed={5} colors={gradientColors}>Connect</GradientText>
                         </h2>
                         <p className="contact-text">
                             Have a project in mind or just want to chat? Feel free to reach out.

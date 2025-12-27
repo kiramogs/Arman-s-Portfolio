@@ -4,9 +4,9 @@ import './Squares.css';
 const Squares = ({
     direction = 'diagonal',
     speed = 0.5,
-    borderColor = '#333',
+    borderColor = 'rgba(168, 181, 160, 0.15)',
     squareSize = 40,
-    hoverFillColor = '#222',
+    hoverFillColor = 'rgba(212, 165, 165, 0.1)',
     className = ''
 }) => {
     const canvasRef = useRef(null);
@@ -55,6 +55,7 @@ const Squares = ({
                 }
             }
 
+            // Soft radial gradient fade to background
             const gradient = ctx.createRadialGradient(
                 canvas.width / 2,
                 canvas.height / 2,
@@ -63,8 +64,8 @@ const Squares = ({
                 canvas.height / 2,
                 Math.sqrt(canvas.width ** 2 + canvas.height ** 2) / 2
             );
-            gradient.addColorStop(0, 'rgba(10, 10, 15, 0)');
-            gradient.addColorStop(1, 'rgba(10, 10, 15, 0.9)');
+            gradient.addColorStop(0, 'rgba(250, 248, 245, 0)');
+            gradient.addColorStop(1, 'rgba(250, 248, 245, 0.9)');
 
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, canvas.width, canvas.height);

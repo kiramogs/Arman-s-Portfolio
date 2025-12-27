@@ -29,7 +29,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-primary, #faf8f5);
     z-index: -1;
 }
 
