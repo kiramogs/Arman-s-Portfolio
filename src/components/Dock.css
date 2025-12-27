@@ -9,14 +9,13 @@
     display: flex;
     align-items: flex-end;
     width: fit-content;
-    gap: 12px;
-    border-radius: 20px;
-    background: rgba(250, 248, 245, 0.9);
+    gap: 8px;
+    padding: 0 14px 14px;
+    background: rgba(245, 241, 235, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(61, 54, 48, 0.1);
-    padding: 0 12px 12px;
-    box-shadow: 0 4px 20px rgba(61, 54, 48, 0.08);
+    border: 1px solid rgba(245, 241, 235, 0.15);
+    border-radius: 20px;
 }
 
 .dock-item {
@@ -24,47 +23,45 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
-    background: linear-gradient(135deg, rgba(168, 181, 160, 0.3), rgba(212, 165, 165, 0.2));
-    border: 1px solid rgba(61, 54, 48, 0.08);
-    box-shadow:
-        0 4px 6px -1px rgba(61, 54, 48, 0.06),
-        0 2px 4px -1px rgba(61, 54, 48, 0.04);
+    border-radius: 12px;
+    background: rgba(245, 241, 235, 0.08);
+    border: 1px solid rgba(245, 241, 235, 0.1);
     cursor: pointer;
     outline: none;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dock-item:hover {
-    background: linear-gradient(135deg, rgba(168, 181, 160, 0.5), rgba(212, 165, 165, 0.35));
+    background: rgba(245, 241, 235, 0.18);
+    border-color: rgba(245, 241, 235, 0.25);
 }
 
 .dock-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3d3630;
+    color: #f5f1eb;
 }
 
 .dock-icon svg {
-    width: 50%;
-    height: 50%;
+    width: 44%;
+    height: 44%;
 }
 
 .dock-label {
     position: absolute;
-    top: -2rem;
+    top: -2.5rem;
     left: 50%;
     width: fit-content;
     white-space: pre;
-    border-radius: 8px;
-    border: 1px solid rgba(61, 54, 48, 0.1);
-    background: rgba(250, 248, 245, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 6px 12px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: #3d3630;
+    background: #f5f1eb;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1a1816;
     transform: translateX(-50%);
-    box-shadow: 0 4px 12px rgba(61, 54, 48, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
