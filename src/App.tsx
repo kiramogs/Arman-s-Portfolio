@@ -22,8 +22,8 @@ function App() {
       <section id="hero" className="hero-section" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <CursorLens
-            baseImage="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-            revealImage="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop"
+            baseImage="/unnamed.png"
+            revealImage="/unnamed.jpg"
             blobSize={150} // Larger, more visible blob
             shapeComplexity={0.9} // Organic shape
             showBackground={true}
