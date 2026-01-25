@@ -24,7 +24,8 @@ function App() {
           <CursorLens
             baseImage="/2.png"
             revealImage="/1.png"
-            blobSize={150} // Larger, more visible blob
+            objectFit="cover"
+            blobSize={300} // Increased size
             shapeComplexity={0.9} // Organic shape
             showBackground={true}
             bgBlobCount={15}
