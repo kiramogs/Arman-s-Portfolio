@@ -22,8 +22,8 @@ function App() {
       <section id="hero" className="hero-section" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <CursorLens
-            baseImage="/unnamed.png"
-            revealImage="/unnamed.jpg"
+            baseImage="/2.png"
+            revealImage="/1.png"
             blobSize={150} // Larger, more visible blob
             shapeComplexity={0.9} // Organic shape
             showBackground={true}
@@ -31,41 +31,21 @@ function App() {
           />
         </div>
 
-        <div className="hero-content container" style={{ position: 'relative', zIndex: 10, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="hero-badge"
-          >
-            <span className="badge-dot" /> Available for Projects
-          </motion.div>
-
-          <h1 className="hero-title">
-            <motion.span initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="block">I Create</motion.span>
-            <motion.span initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="block gradient-text">Digital Stories</motion.span>
-            <motion.span initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="block">That Captivate</motion.span>
+        <div className="hero-content container" style={{ position: 'relative', zIndex: 10, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <h1 className="hero-title" style={{ fontSize: 'clamp(4rem, 15vw, 12rem)', margin: 0 }}>
+            <motion.span initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="block gradient-text">Arman</motion.span>
           </h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="hero-description"
-          >
-            Freelance creative director & video editor crafting scroll-stopping content for brands that dare to stand out.
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="hero-buttons"
+            style={{ marginTop: '2rem' }}
           >
             <a href="#work" className="btn btn-primary">
               View Work <FaArrowRight style={{ marginLeft: '8px' }} />
             </a>
-            <a href="#contact" className="btn btn-ghost">Get in Touch</a>
           </motion.div>
         </div>
 
