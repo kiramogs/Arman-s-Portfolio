@@ -125,16 +125,53 @@ body {
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-family: var(--font-heading);
-  letter-spacing: -0.5px;
-  font-style: italic;
-  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  line-height: 1;
+  gap: 0;
 }
 
-.dot {
+.logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-main);
+  letter-spacing: 1px;
+}
+
+.logo-name em {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-right: -1px;
+}
+
+.logo-stroke {
+  width: 56px;
+  height: 8px;
   color: var(--primary);
+  margin-top: -2px;
+  margin-left: 2px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.logo-stroke path {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: draw-stroke 1s ease forwards 0.5s;
+}
+
+.logo:hover .logo-stroke {
+  opacity: 1;
+}
+
+@keyframes draw-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .nav-links {

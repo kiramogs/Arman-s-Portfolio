@@ -9,7 +9,10 @@ function App() {
 
             {/* NAVIGATION */}
             <nav className="navbar liquid-glass-nav">
-                <div className="logo">arman<span className="dot">.</span></div>
+                <a href="#" className="logo">
+                    <span className="logo-name"><em>A</em>rman</span>
+                    <svg className="logo-stroke" viewBox="0 0 60 8" fill="none"><path d="M2 6c10-5 25-5 40-2s14 2 16-1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>
+                </a>
                 <div className="nav-links">
                     <a href="#work" className="nav-link">Work</a>
                     <a href="#skills" className="nav-link">Skills</a>
