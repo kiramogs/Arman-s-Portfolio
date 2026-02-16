@@ -1,22 +1,26 @@
+/* SpotlightCard — overridden for Liquid Glass aesthetic */
 .card-spotlight {
     position: relative;
-    border-radius: 12px;
-    border: 1px solid rgba(139, 69, 19, 0.1);
-    /* Subtle brown border */
-    background-color: rgba(255, 255, 255, 0.4);
-    /* Glassy beige */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.07);
     padding: 3rem;
     overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1);
     --mouse-x: 50%;
     --mouse-y: 50%;
     --spotlight-color: rgba(255, 255, 255, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card-spotlight:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .card-spotlight::before {
@@ -30,15 +34,14 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
-    z-index: 1;
 }
 
 .card-spotlight:hover::before,
 .card-spotlight:focus-within::before {
-    opacity: 1;
+    opacity: 0.8;
 }
 
-/* Ensure content stays above spotlight */
+/* Content above spotlight gradient */
 .card-spotlight>* {
     position: relative;
     z-index: 2;
