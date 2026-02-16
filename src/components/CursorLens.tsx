@@ -10,7 +10,7 @@ import {
 interface CursorLensProps {
     baseImage?: string
     revealImage?: string
-    objectFit?: "cover" | "contain"
+    objectFit?: string
     backgroundColor?: string
     blobOutlineColor?: string
     parallaxStrength?: number
@@ -393,7 +393,7 @@ export default function CursorLens(props: CursorLensProps) {
                             ...imageStyle,
                             x: baseX,
                             y: baseY,
-                            scale: 1.1,
+                            scale: 1,
                         }}
                     />
                 ) : (
@@ -426,7 +426,7 @@ export default function CursorLens(props: CursorLensProps) {
                             ...revealImageStyle,
                             x: revealX,
                             y: revealY,
-                            scale: 1.1,
+                            scale: 1,
                         }}
                     />
                 ) : (
@@ -438,7 +438,7 @@ export default function CursorLens(props: CursorLensProps) {
                             background: "radial-gradient(ellipse at 30% 20%, rgba(124, 58, 237, 0.8) 0%, transparent 40%), radial-gradient(ellipse at 70% 80%, rgba(6, 182, 212, 0.7) 0%, transparent 40%), linear-gradient(180deg, rgba(20, 20, 35, 1) 0%, rgba(10, 10, 15, 1) 100%)",
                             x: revealX,
                             y: revealY,
-                            scale: 1.1,
+                            scale: 1,
                         }}
                     />
                 )}

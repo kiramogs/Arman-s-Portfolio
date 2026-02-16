@@ -1,0 +1,118 @@
+.menu-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    /* Add padding because it's full width */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu__item {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid;
+    /* color set inline via borderColor */
+}
+
+/* First item border top? Or assume container border. Actually standard list usually has borders between. */
+.menu__item:first-child {
+    border-top: 1px solid;
+}
+
+
+.menu__item-link {
+    display: block;
+    font-size: 6vw;
+    /* Massive text */
+    cursor: pointer;
+    padding: 2vh 0;
+    font-family: 'Playfair Display', serif;
+    /* Use your heading font */
+    font-weight: 300;
+    font-style: italic;
+    text-decoration: none;
+    will-change: transform, color;
+    transition: opacity 0.3s;
+}
+
+.menu__item-link:hover {
+    opacity: 0;
+    /* Hide text on hover to show marquee */
+}
+
+.marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Full viewport width for the reveal */
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translate3d(0, 101%, 0);
+    /* Hidden by default */
+}
+
+.marquee__inner-wrap {
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, -101%, 0);
+    /* Counter transform */
+}
+
+.marquee__inner {
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    position: relative;
+    will-change: transform;
+}
+
+.marquee__part {
+    display: flex;
+    align-items: center;
+    padding: 0 4vw;
+    flex-shrink: 0;
+}
+
+.marquee__part span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 6vw;
+    text-transform: uppercase;
+}
+
+.marquee__img {
+    width: 200px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 4vw;
+    border-radius: 50px;
+    /* Pill shape images */
+}
+
+@media screen and (min-width: 53em) {
+    .menu__item-link {
+        font-size: 5vw;
+        padding: 3vh 0;
+    }
+
+    .marquee__part span {
+        font-size: 5vw;
+    }
+}

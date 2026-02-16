@@ -24,11 +24,12 @@ function App() {
           <CursorLens
             baseImage="/2.png"
             revealImage="/1.png"
-            objectFit="cover"
-            blobSize={300} // Increased size
-            shapeComplexity={0.9} // Organic shape
+            blobSize={450}
+            shapeComplexity={0.9}
             showBackground={true}
             bgBlobCount={15}
+            parallaxStrength={0}
+            objectFit="100% 100%"
           />
         </div>
 
